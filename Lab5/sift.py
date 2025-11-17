@@ -1,14 +1,11 @@
 import cv2
 import matplotlib.pyplot as plt
 
-# load images in grayscale
 img1 = cv2.imread('xray_twin1.png', cv2.IMREAD_GRAYSCALE)
 img2 = cv2.imread('xray_twin2.png', cv2.IMREAD_GRAYSCALE)
 
-# initialize SIFT detector
 sift = cv2.SIFT_create()
 
-# detect keypoints and compute descriptors
 keypoints1, descriptors1 = sift.detectAndCompute(img1, None)
 keypoints2, descriptors2 = sift.detectAndCompute(img2, None)
 

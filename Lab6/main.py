@@ -1,4 +1,3 @@
-from PIL import Image
 import torch
 from realesrgan import RealESRGANer
 from basicsr.archs.rrdbnet_arch import RRDBNet

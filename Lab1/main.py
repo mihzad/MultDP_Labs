@@ -41,6 +41,7 @@ clahe_img = clahe.apply(img_gray)
 
 plot_histogram(clahe_img, "CLAHE Grayscale Histogram")
 
+cv2.imshow("Original Gray", img_gray)
 cv2.imshow("CLAHE Gray", clahe_img)
 cv2.waitKey(0)
 
@@ -93,6 +94,7 @@ sharp_eq_color = cv2.filter2D(eq_color_img, -1, example_sharpen_kernel)
 cv2.imshow("Original Color", img_color)
 cv2.imshow("Equalized Color", eq_color_img)
 cv2.imshow("CLAHE Color", clahe_color_img)
+cv2.waitKey(0)
 cv2.imshow("Sharpened CLAHE Color", sharp_clahe_color)
 cv2.imshow("Sharpened Equalized Color", sharp_eq_color)
 cv2.waitKey(0)
